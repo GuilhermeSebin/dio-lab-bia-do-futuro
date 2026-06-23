@@ -54,7 +54,7 @@ Acessível, informal, acolhedor e construtivo. Evita completamente jargões do m
 
 ```mermaid
 flowchart TD
-    A[Cliente] -->|Mensagem| B[Interface]
+    A[Usuário] -->|Mensagem| B[Interface]
     B --> C[LLM]
     C --> D[Base de Conhecimento]
     D --> C
@@ -68,8 +68,8 @@ flowchart TD
 | Componente | Descrição |
 | --- | --- |
 | Interface | Chatbot interativo desenvolvido em Python utilizando Streamlit. |
-| LLM | GPT-4 (ou Claude 3.5 Sonnet) via API, com system prompt focado em educação financeira. |
-| Base de Conhecimento | Arquivos estruturados em CSV contendo o histórico transacional limpo via pipeline de dados, regras de categorização e cartilhas de educação financeira. |
+| LLM | Ollama (local) |
+| Base de Conhecimento | Arquivos estruturados em CSV e JSON contendo o histórico transacional limpo via pipeline de dados, regras de categorização e cartilhas de educação financeira. |
 | Validação | Scripts de checagem para evitar alucinações matemáticas (o LLM não faz contas complexas sozinho, ele chama funções Python para garantir precisão) e filtros de moderação. |
 
 ---
